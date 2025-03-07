@@ -1,14 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
+:root{
+  --backColor: #211C84;
+  --fontColor: #e4dcf8;
+}
+
+*{
+  font-family: 'Work Sans';
+}
+
 body{
-  background-color: #211C84;
+  background-color: var(--backColor);
   display: flex;
   align-items: flex-start;
   justify-content: center;
   min-height: calc(100vh - 100px);
   max-width: 100vw;
-  margin: 100px 0 0 0;
 }
 
 button{
@@ -20,20 +28,19 @@ button{
 }
 
 .time{
-  font-family: 'Work Sans';
   font-weight: 700;
-  font-size: 150px;
-  color: #e4dcf8;
-  margin: 15px 0 10% 0;
+  font-size: 140px;
+  color: var(--fontColor);
+  margin: 15px 0 70px 0;
 }
 
 .button-startStop {
-  background: #e4dcf8;
-  border: 1px solid #e4dcf8;
+  background: var(--fontColor);
+  border: 1px solid var(--fontColor);
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 100) 1px 3px 10px;
   box-sizing: border-box;
-  color: #7A73D1;
+  color: var(--backColor);
   cursor: pointer;
   display: inline-block;
   font-size: 16px;
@@ -52,22 +59,23 @@ button{
 .button-startStop:hover, .button-startStop:active {
   background-color: initial;
   background-position: 0 0;
-  color: #e4dcf8;
+  color: var(--fontColor);
 }
 
 .button-startStop:active {
-  color: #d3b7ff;
-  border: 1px solid #d3b7ff;
+  color: var(--fontColor);
+  border: 1px solid #ffffff;
   opacity: .6;
 }
 
 .button-settings {
-  background: #e4dcf8;
-  border: 1px solid #e4dcf8;
+  margin: 100px 0 0 0;
+  background: var(--fontColor);
+  border: 1px solid var(--fontColor);
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 100) 1px 3px 10px;
   box-sizing: border-box;
-  color: #7A73D1;
+  color: var(--backColor);
   cursor: pointer;
   display: inline-block;
   font-size: 16px;
@@ -84,15 +92,14 @@ button{
 .button-settings:hover, .button-settings:active {
   background-color: initial;
   background-position: 0 0;
-  color: #e4dcf8;
+  color: var(--fontColor);
 }
 
 .button-settings:active {
-  color: #d3b7ff;
-  border: 1px solid #d3b7ff;
+  color: var(--fontColor);
+  border: 1px solid var(--fontColor);
   opacity: .6;
 }
-
 
 .back-settings{
   width: 100%;
@@ -101,7 +108,7 @@ button{
   top: 0;
   left: 0;
   backdrop-filter: blur(4px);
-  background-color: #211c8425;
+  background-color: #0000003f;
   z-index: 1;
   display: flex;
   align-items: center;
@@ -116,34 +123,17 @@ button{
 
 .container-settings{
   position: relative;
-  background-color: #e4dcf8;
-  width: 550px;
+  background-color: #ffffff;
+  width: 300px;
   height: auto;
   padding: 1.5rem;
   border-radius: 0px;
-  animation-name: modal;
-  animation-duration: .5;
   box-shadow: 0 5px 15px -5px rgba(0, 0, 0, .4);
   z-index: 10;
 }
 
-@keyframes modal {
-  from {
-    transform: translateY(50vh);
-  }
-
-  to{
-    transform: translateY(0);
-  }
-}
-
-.close{
-  transition: transform 1s cubic-bezier(0, -0.42, 1, -0.41);
-  transform: translateY(60vh);
-}
-
 .close-settings{
-  background-color: #e4dcf8;
+  background-color:#ffffff;
   position: absolute;
   border: #e4dcf800;
   top: 0px;
@@ -154,4 +144,27 @@ button{
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+
+input[type=number]{
+  font-size: xx-large;
+  width: 190px;
+}
+
+.input-container{
+  padding: 10px;
+}
+
+.progressBar{
+  width: 100vw;
+  height: 3px;
+  background-color: var(--fontColor);
+  }
+
+.progressBarLine{
+  background-color: var(--backColor);
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  transition: width 1s linear;
 }
