@@ -1,70 +1,197 @@
-# Getting Started with Create React App
+# Pomodoro Timer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A productivity-focused Pomodoro application built with React that helps users manage work sessions, short breaks, and long breaks. The application provides customizable timers, progress tracking, and interface personalization through color settings.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+* Pomodoro work timer
+* Short break timer
+* Long break timer
+* Start and pause functionality
+* Timer reset functionality
+* Real-time countdown
+* Progress bar visualization
+* Custom session duration
+* Background color customization
+* Font color customization
+* Responsive user interface
+* Component-based React architecture
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+* React
+* JavaScript
+* CSS
+* HTML
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Screenshots
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Pomodoro Session
+<img src="images/pomodoro-session.png" width="500"/>
+![Pomodoro Session](images/pomodoro-session.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Short Break
+<img src="images/short-break.png" width="500"/>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Long Break
+<img src="images/long-break.png" width="500"/>
 
-### `npm run eject`
+### Settings Panel
+<img src="images/settings-panel.png" width="500"/>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## How to Run
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Clone the repository
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```text
+git clone https://github.com/1affogato/pomodoro.git
 
-## Learn More
+cd pomodoro
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Install dependencies
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```text
+npm install
+```
 
-### Code Splitting
+### Start the development server
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```text
+npm start
+```
 
-### Analyzing the Bundle Size
+### Open
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```text
+http://localhost:3000
+```
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Application Modes
 
-### Advanced Configuration
+### Pomodoro
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Focused work session designed to maximize productivity.
 
-### Deployment
+Default duration:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```text
+25 minutes
+```
 
-### `npm run build` fails to minify
+### Short Break
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Short recovery period between work sessions.
+
+Default duration:
+
+```text
+5 minutes
+```
+
+### Long Break
+
+Extended recovery period after multiple Pomodoro sessions.
+
+Default duration:
+
+```text
+15 minutes
+```
+
+---
+
+## Customization
+
+The application allows users to customize:
+
+* Session duration
+* Background color
+* Font color
+
+Settings can be modified through the integrated settings panel.
+
+---
+
+## Project Structure
+
+```text
+pomodoro/
+
+│
+├── public/
+│
+├── src/
+│   ├── components/
+│   │   ├── TimerGestord.js
+│   │   ├── TimerPomodoro.js
+│   │   ├── TimerShortBreak.js
+│   │   └── TimerLongBreak.js
+│   │
+│   ├── App.js
+│   ├── App.css
+│   ├── index.js
+│   └── index.css
+│
+├── package.json
+├── package-lock.json
+└── README.md
+```
+
+---
+
+## Architecture
+
+```text
+User Interface
+      │
+      ▼
+ Timer Manager
+      │
+      ├─────────────┬─────────────┐
+      ▼             ▼             ▼
+ Pomodoro      Short Break    Long Break
+      │             │             │
+      ▼             ▼             ▼
+ Timer Logic  Timer Logic  Timer Logic
+      │
+      ▼
+ State Management
+      │
+      ▼
+ Real-Time Countdown
+      │
+      ▼
+ Progress Tracking
+```
+
+---
+
+## Future Improvements
+
+* Sound notifications
+* Browser notifications
+* Session history
+* Daily productivity statistics
+* Task management
+* Dark mode presets
+* Local storage persistence
+* PWA support
+* Mobile optimization
+* Keyboard shortcuts
+
+---
+
+## Author
+
+Software Engineering student passionate about Web Development, Data Analytics, and Artificial Intelligence.
