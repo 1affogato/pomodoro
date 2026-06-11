@@ -173,24 +173,3 @@ User Interface
       ▼
  Progress Tracking
 ```
-
----
-
-## Future Improvements
-
-* Sound notifications
-* Browser notifications
-* Session history
-* Daily productivity statistics
-* Task management
-* Dark mode presets
-* Local storage persistence
-* PWA support
-* Mobile optimization
-* Keyboard shortcuts
-
----
-
-## Author
-
-Software Engineering student passionate about Web Development, Data Analytics, and Artificial Intelligence.
