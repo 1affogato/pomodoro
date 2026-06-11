@@ -34,7 +34,6 @@ A productivity-focused Pomodoro application built with React that helps users ma
 
 ### Pomodoro Session
 <img src="images/pomodoro-session.png" width="500"/>
-![Pomodoro Session](images/pomodoro-session.png)
 
 ### Short Break
 <img src="images/short-break.png" width="500"/>
